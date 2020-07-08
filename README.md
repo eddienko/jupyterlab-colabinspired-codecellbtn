@@ -1,8 +1,17 @@
 # @eddienko/jupyterlab-colabinspired-codecellbtn
 
 A JupyterLab extension for notebook cells that adds a set of buttons to each cell.
+The following buttons are added:
 
-Most of the code of this extension has been borrowed from `@ibqn/jupyterlab-codecellbtn`.
+* Run cell
+* Add cell above
+* Add cell below
+* Format code in cell (requires extension [@ryantam626/jupyterlab_code_formatter](https://github.com/ryantam626/jupyterlab_code_formatter))
+* Move cell up
+* Movel cell down
+* Delete cell
+
+Most of the code of this extension has been borrowed from [@ibqn/jupyterlab-codecellbtn](https://github.com/ibqn/jupyterlab-codecellbtn)
 
 ![screenshot](screenshot.png)
 
@@ -13,11 +22,12 @@ Most of the code of this extension has been borrowed from `@ibqn/jupyterlab-code
 
 ## Installation
 
-jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn 
-
 Note that in order to view the buttons you also need to install a theme:
 
-jupyter labextension install @eddienko/jupyterlab-colabinspired-theme-light
+```bash
+jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn \
+                             @eddienko/jupyterlab-colabinspired-theme-light
+```
 
 ## Development
 
