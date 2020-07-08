@@ -35,7 +35,7 @@ function activateCommands(
   tracker: INotebookTracker
 ): Promise<void> {
   // tslint:disable-next-line:no-console
-  console.log('JupyterLab extension jupyterlab-cellcodebtn is activated!');
+  console.log('JupyterLab extension jupyterlab-colabinspired-cellcodebtn is activated!');
 
   Promise.all([app.restored]).then(([params]) => {
     const { commands, shell } = app;
@@ -78,9 +78,33 @@ function activateCommands(
         const current = getCurrent(args);
 
         if (current) {
-          const { context, content } = current;
-          NotebookActions.deleteCells(content);
-          console.log(context);
+          NotebookActions.deleteCells(current.content);
+          // current.content.mode = 'edit';
+        }
+      },
+      isEnabled
+    });
+
+    commands.addCommand('insert-above-codecell', {
+      label: 'Insert Cell Above',
+      execute: args => {
+        const current = getCurrent(args);
+
+        if (current) {
+          NotebookActions.insertAbove(current.content);
+          // current.content.mode = 'edit';
+        }
+      },
+      isEnabled
+    });
+
+    commands.addCommand('insert-below-codecell', {
+      label: 'Insert Cell Below',
+      execute: args => {
+        const current = getCurrent(args);
+
+        if (current) {
+          NotebookActions.insertBelow(current.content);
           // current.content.mode = 'edit';
         }
       },
@@ -94,9 +118,7 @@ function activateCommands(
         const current = getCurrent(args);
 
         if (current) {
-          const { context, content } = current;
-          NotebookActions.moveUp(content);
-          console.log(context);
+          NotebookActions.moveUp(current.content);
           // current.content.mode = 'edit';
         }
       },
@@ -110,9 +132,7 @@ function activateCommands(
         const current = getCurrent(args);
 
         if (current) {
-          const { context, content } = current;
-          NotebookActions.moveDown(content);
-          console.log(context);
+          NotebookActions.moveDown(current.content);
           // current.content.mode = 'edit';
         }
       },
@@ -178,6 +198,29 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
         <button
           className={CELL_FOOTER_BUTTON_CLASS}
           onClick={event => {
+            this.commands.execute('insert-above-codecell');
+          }}
+        >
+<svg width="16" height="16" viewBox="0 0 24 24">
+   <path fill="#000000" d="M22,14A2,2 0 0,0 20,12H4A2,2 0 0,0 2,14V21H4V19H8V21H10V19H14V21H16V19H20V21H22V14M4,14H8V17H4V14M10,14H14V17H10V14M20,14V17H16V14H20M11,10H13V7H16V5H13V2H11V5H8V7H11V10Z" />
+</svg>
+
+        </button>
+
+        <button
+          className={CELL_FOOTER_BUTTON_CLASS}
+          onClick={event => {
+            this.commands.execute('insert-below-codecell');
+          }}
+        ><svg width="16" height="16" viewBox="0 0 24 24">
+   <path fill="#000000" d="M22,10A2,2 0 0,1 20,12H4A2,2 0 0,1 2,10V3H4V5H8V3H10V5H14V3H16V5H20V3H22V10M4,10H8V7H4V10M10,10H14V7H10V10M20,10V7H16V10H20M11,14H13V17H16V19H13V22H11V19H8V17H11V14Z" />
+</svg>
+
+        </button>
+
+        <button
+          className={CELL_FOOTER_BUTTON_CLASS}
+          onClick={event => {
             this.commands.execute('jupyterlab_code_formatter:format');
           }}
         >
@@ -229,10 +272,10 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
 }
 
 /**
- * The fooet button extension for the code cell.
+ * The footer button extension for the code cell.
  */
 const footerButtonExtension: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab-cellcodebtn',
+  id: '@eddienko/jupyterlab-colabinspired-codecellbtn',
   autoStart: true,
   activate: activateCommands,
   requires: [INotebookTracker]
@@ -247,12 +290,6 @@ const cellFactory: JupyterFrontEndPlugin<NotebookPanel.IContentFactory> = {
   requires: [IEditorServices],
   autoStart: true,
   activate: (app: JupyterFrontEnd, editorServices: IEditorServices) => {
-    // tslint:disable-next-line:no-console
-    console.log(
-      'JupyterLab extension jupyterlab-cellcodebtn',
-      'overrides default nootbook content factory'
-    );
-
     const { commands } = app;
     const editorFactory = editorServices.factoryService.newInlineEditor;
     return new ContentFactoryWithFooterButton(commands, { editorFactory });
