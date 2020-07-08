@@ -13,7 +13,11 @@ Most of the code of this extension has been borrowed from `@ibqn/jupyterlab-code
 
 ## Installation
 
-jupyter labextension install eddienko/jupyterlab-colabinspired-codecellbtn @eddienko/jupyterlab-colabinspired-theme-light
+jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn 
+
+Note that in order to view the buttons you also need to install a theme:
+
+jupyter labextension install @eddienko/jupyterlab-colabinspired-theme-light
 
 ## Development
 
