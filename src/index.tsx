@@ -191,7 +191,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
           }}
         >
 <svg width="16" height="16" viewBox="0 0 24 24">
-   <path fill="#000000" d="M8,5.14V19.14L19,12.14L8,5.14Z"></path>
+   <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"></path>
 </svg>
         </button>
 
@@ -202,7 +202,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
           }}
         >
 <svg width="16" height="16" viewBox="0 0 24 24">
-   <path fill="#000000" d="M22,14A2,2 0 0,0 20,12H4A2,2 0 0,0 2,14V21H4V19H8V21H10V19H14V21H16V19H20V21H22V14M4,14H8V17H4V14M10,14H14V17H10V14M20,14V17H16V14H20M11,10H13V7H16V5H13V2H11V5H8V7H11V10Z" />
+   <path fill="currentColor" d="M22,14A2,2 0 0,0 20,12H4A2,2 0 0,0 2,14V21H4V19H8V21H10V19H14V21H16V19H20V21H22V14M4,14H8V17H4V14M10,14H14V17H10V14M20,14V17H16V14H20M11,10H13V7H16V5H13V2H11V5H8V7H11V10Z" />
 </svg>
 
         </button>
@@ -213,7 +213,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
             this.commands.execute('insert-below-codecell');
           }}
         ><svg width="16" height="16" viewBox="0 0 24 24">
-   <path fill="#000000" d="M22,10A2,2 0 0,1 20,12H4A2,2 0 0,1 2,10V3H4V5H8V3H10V5H14V3H16V5H20V3H22V10M4,10H8V7H4V10M10,10H14V7H10V10M20,10V7H16V10H20M11,14H13V17H16V19H13V22H11V19H8V17H11V14Z" />
+   <path fill="currentColor" d="M22,10A2,2 0 0,1 20,12H4A2,2 0 0,1 2,10V3H4V5H8V3H10V5H14V3H16V5H20V3H22V10M4,10H8V7H4V10M10,10H14V7H10V10M20,10V7H16V10H20M11,14H13V17H16V19H13V22H11V19H8V17H11V14Z" />
 </svg>
 
         </button>
@@ -225,7 +225,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
           }}
         >
 <svg width="16" height="16" viewBox="0 0 24 24">
-   <path fill="#000000" d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" />
+   <path fill="currentColor" d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" />
 </svg>
 
         </button>
@@ -237,7 +237,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
           }}
         >
 <svg width="16" height="16" viewBox="0 0 24 24">
-    <path fill="#000000" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+    <path fill="currentColor" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
 </svg>
         </button>
 
@@ -248,7 +248,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
           }}
         >
 <svg width="16" height="16" viewBox="0 0 24 24">
-    <path fill="#000000" d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" />
+    <path fill="currentColor" d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" />
 </svg>
         </button>
 
@@ -259,7 +259,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
           }}
         >
 <svg width="16" height="16" viewBox="0 0 24 24">
-   <path fill="#000000" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+   <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
 </svg>
 
         </button>
