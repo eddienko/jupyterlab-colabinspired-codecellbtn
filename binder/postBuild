@@ -1,0 +1,6 @@
+
+jupyter labextension install @ryantam626/jupyterlab_code_formatter \
+                             @eddienko/jupyterlab-colabinspired-codecellbtn \
+                             @eddienko/jupyterlab-colabinspired-theme-light                     
+
+jupyter serverextension enable --py jupyterlab_code_formatter
