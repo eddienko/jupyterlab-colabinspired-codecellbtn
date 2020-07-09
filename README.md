@@ -1,5 +1,7 @@
 # @eddienko/jupyterlab-colabinspired-codecellbtn
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eddienko/jupyterlab-colabinspired-codecellbtn/binder?urlpath=/lab/tree/demo/demo.ipynb)
+
 A JupyterLab extension for notebook cells that adds a set of buttons to each cell.
 The following buttons are added:
 
