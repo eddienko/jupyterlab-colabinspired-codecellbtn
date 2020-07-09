@@ -5,7 +5,7 @@ dependencies:
 - nodejs=11
 - python=3.7
 - autopep8
-- isort
+- isort=4
 - black
 - pip
 - matplotlib
